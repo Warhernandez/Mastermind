@@ -33,10 +33,10 @@ public class AnswerDetection : MonoBehaviour
 
     private void Evaluate()
     {
-        Material[] answerMats = new Material[answerKey.Length];
-        for (int i = 0; i < answerKey.Length; i++)
+        Material[] answerMats = new Material[answerkey.Length];
+        for (int i = 0; i < answerkey.Length; i++)
         {
-            Material temp = answerKey[i].GetComponent<MeshRenderer>().material;
+            Material temp = answerkey[i].GetComponent<MeshRenderer>().material;
             answerMats[i] = temp;
         }
 
