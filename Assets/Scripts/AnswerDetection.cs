@@ -6,17 +6,7 @@ using UnityEngine;
 
 public class AnswerDetection : MonoBehaviour
 {
-    /// <summary>
-    /// Create four public GameObject arrays
-    /// currentRow holds the four positions that the Game Player clicks for their answers
-    /// answerKey holds the four positions that contains the secret code.
-    /// pins holds the two prefabs for correct position/color, or correct color only
-    /// hintGrid refers to the parent object of the HintGrid.
-    /// </summary>
-    public GameObject[] currentRow;
-    public GameObject[] answerkey;
-    public GameObject[] pins;
-    public GameObject hintGrid;
+    
 
     void Start()
     {
@@ -33,10 +23,10 @@ public class AnswerDetection : MonoBehaviour
 
     private void Evaluate()
     {
-        Material[] answerMats = new Material[answerkey.Length];
-        for (int i = 0; i < answerkey.Length; i++)
+        Material[] answerMats = new Material[answerKey.Length];
+        for (int i = 0; i < answerKey.Length; i++)
         {
-            Material temp = answerkey[i].GetComponent<MeshRenderer>().material;
+            Material temp = answerKey[i].GetComponent<MeshRenderer>().material;
             answerMats[i] = temp;
         }
 
